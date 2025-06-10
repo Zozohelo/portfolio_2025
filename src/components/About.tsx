@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaCode } from "react-icons/fa";
 
@@ -164,7 +163,7 @@ const AboutSection = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.24 }}
           >
-            {skills.map((skill, i) => (
+            {skills.map((skill) => (
               <motion.div
                 key={skill.name}
                 variants={skillCardVariants}

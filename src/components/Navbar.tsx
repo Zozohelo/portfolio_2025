@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiFillHome } from "react-icons/ai";
 import { FaLaptopCode } from "react-icons/fa";
 import { MdContactSupport } from "react-icons/md";
