@@ -19,21 +19,20 @@ const socials = [
   {
     name: "Discord",
     icon: <FaDiscord />,
-    link: "https://discord.com/users/Zozo#1234",
+    link: "https://discord.com/",
     color: "text-indigo-500",
     value: "z o z o",
   },
   {
     name: "Facebook",
     icon: <FaFacebook />,
-    link: "https://facebook.com/zoltan.kozma.16",
+    link: "https://www.facebook.com/profile.php?id=100004340988481",
     color: "text-blue-800",
     value: "Zoltán Kozma",
   },
   {
     name: "Instagram",
     icon: <FaInstagram />,
-    link: "https://instagram.com/zozo.helo",
     color: "text-pink-500",
     value: "_zoltankozma_",
   },
