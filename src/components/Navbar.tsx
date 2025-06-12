@@ -20,7 +20,7 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white border-gray-200 dark:bg-gray-900 shadow transition-all">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white border-gray-200 dark:bg-gray-900 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.16)] transition-all">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/">
           <img className="h-12 w-12" src="/images/logo.png" alt="logo" />

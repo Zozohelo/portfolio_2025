@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
 import TypewriterEffect from "typewriter-effect";
+import LetterGlitch from "../LetterGlicth"; // <--- importáld be!
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -50,13 +51,25 @@ const MainPage = () => {
   const words = t.welcome;
   return (
     <motion.div
-      className="w-full p-6 md:p-10 mt-20 bg-gradient-to-b from-blue-500 via-sky-400 to-blue-200 flex items-center justify-center"
+      className="w-full p-6 md:p-10 mt-20 relative flex items-center justify-center overflow-hidden"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
+      {/* LetterGlitch háttér */}
+      <div className="absolute inset-0 z-0">
+        <LetterGlitch
+          glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
+          glitchSpeed={50}
+          centerVignette={false}
+          outerVignette={true}
+          smooth={true}
+        />
+      </div>
+
+      {/* Tartalom overlay */}
       <motion.div
-        className="w-full md:w-3/4 lg:w-2/3 flex flex-col md:flex-row items-center justify-between bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-10 gap-12"
+        className="relative z-10 w-full md:w-3/4 lg:w-2/3 flex flex-col md:flex-row items-center justify-between bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-10 gap-12"
         variants={containerVariants}
       >
         {/* Left side: Text and buttons */}
