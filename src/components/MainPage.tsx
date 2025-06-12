@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
+import TypewriterEffect from "typewriter-effect";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,6 +47,7 @@ const avatarVariants = {
 
 const MainPage = () => {
   const { t } = useLanguage();
+  const words = t.welcome;
   return (
     <motion.div
       className="w-full p-6 md:p-10 mt-20 bg-gradient-to-b from-blue-500 via-sky-400 to-blue-200 flex items-center justify-center"
@@ -64,7 +66,9 @@ const MainPage = () => {
         >
           <motion.div variants={textVariants}>
             <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4 drop-shadow-lg text-center md:text-start">
-              {t.welcome}
+              <TypewriterEffect
+                options={{ strings: words, autoStart: true, loop: true }}
+              />
             </h1>
             <p className="text-lg md:text-xl text-blue-800 font-medium text-center md:text-start">
               {t.description}
