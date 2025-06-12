@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
+import { useLanguage } from "../contexts/LanguageContext";
 
 // Socials config
 const socials = [
@@ -57,12 +58,12 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 36, scale: 0.9 },
+  hidden: { opacity: 0, y: 36, scale: 0.92 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: "spring", stiffness: 80, damping: 14 },
+    transition: { type: "tween", duration: 0.65, ease: "easeOut" },
   },
 };
 
@@ -72,7 +73,7 @@ const logoVariants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { type: "spring", delay: 0.15, duration: 0.6 },
+    transition: { type: "tween", delay: 0.15, duration: 0.6, ease: "easeOut" },
   },
 };
 
@@ -81,11 +82,12 @@ const nameVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { delay: 0.3, duration: 0.5 },
+    transition: { delay: 0.3, duration: 0.5, type: "tween", ease: "easeOut" },
   },
 };
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer
       id="elerhetoseg"
@@ -109,13 +111,13 @@ const Footer = () => {
             className="text-xl font-bold text-white text-center"
             variants={nameVariants}
           >
-            Kozma Zoltán
+            {t.profileName}
           </motion.h3>
           <motion.span
             className="text-white font-bold text-sm mt-1 text-center"
             variants={nameVariants}
           >
-            Frontend fejlesztő • Portfolio
+            {t.profileRole}
           </motion.span>
         </motion.div>
         {/* Social ikonok animáltan, egysorban, középen */}
@@ -133,20 +135,16 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               variants={cardVariants}
-              whileHover={{
-                scale: 1.08,
-                boxShadow: "0 8px 32px rgba(37, 99, 235, 0.13)",
-              }}
               className={`
-                group flex flex-col items-center justify-center
+                flex flex-col items-center justify-center
                 w-28 h-28 sm:w-32 sm:h-32
-                bg-white/80 rounded-2xl shadow-md hover:shadow-2xl transition border border-blue-200
-                hover:bg-gradient-to-br hover:from-sky-100 hover:to-blue-50
+                bg-white/80 rounded-2xl shadow-md border border-blue-200
+                transition
                 cursor-pointer
               `}
             >
               <span
-                className={`text-3xl sm:text-4xl transition-all group-hover:scale-125 ${s.color}`}
+                className={`text-3xl sm:text-4xl transition-all ${s.color}`}
               >
                 {s.icon}
               </span>
@@ -170,7 +168,7 @@ const Footer = () => {
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          &copy; {new Date().getFullYear()} Kozma Zoltán. Minden jog fenntartva.
+          &copy; {new Date().getFullYear()} {t.footerCopyright}
         </motion.div>
       </div>
     </footer>

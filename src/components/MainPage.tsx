@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -44,6 +45,7 @@ const avatarVariants = {
 };
 
 const MainPage = () => {
+  const { t } = useLanguage();
   return (
     <motion.div
       className="w-full p-6 md:p-10 mt-20 bg-gradient-to-b from-blue-500 via-sky-400 to-blue-200 flex items-center justify-center"
@@ -61,14 +63,11 @@ const MainPage = () => {
           variants={leftVariants}
         >
           <motion.div variants={textVariants}>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4 drop-shadow-lg">
-              Üdvözöllek!
+            <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4 drop-shadow-lg text-center md:text-start">
+              {t.welcome}
             </h1>
-            <p className="text-lg md:text-xl text-blue-800 font-medium">
-              Kozma Zoltán vagyok, Frontend fejlesztéssel foglalkozom.
-              Szenvedélyem a modern, letisztult és reszponzív weboldalak, mobil
-              applikációk készítése, amelyek nemcsak jól néznek ki, de
-              felhasználóbarátok is.
+            <p className="text-lg md:text-xl text-blue-800 font-medium text-center md:text-start">
+              {t.description}
             </p>
           </motion.div>
           <motion.div
@@ -77,16 +76,16 @@ const MainPage = () => {
             transition={{ delay: 0.5 }}
           >
             <a
-              href="#contact"
+              href="#elerhetoseg"
               className="px-6 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-lg hover:bg-blue-700 transition"
             >
-              Elérhetőségek
+              {t.contacts}
             </a>
             <a
-              href="#work"
+              href="#munkaim"
               className="px-6 py-3 rounded-full bg-white border-2 border-blue-600 text-blue-700 font-semibold hover:bg-blue-50 transition shadow"
             >
-              Munkáim
+              {t.myworks}
             </a>
           </motion.div>
         </motion.div>

@@ -1,0 +1,41 @@
+/* Navbar menu mobil animáció - nincsen szükség npm csomagra! */
+.Navbar__menu {
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-16px);
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  z-index: 40;
+  background: oklch(21% 0.034 264.665);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.dark .Navbar__menu {
+  background: #111827;
+}
+
+.Navbar__menu--open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .Navbar__menu {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    position: static !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    z-index: 0 !important;
+  }
+}

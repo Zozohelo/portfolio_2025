@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaCode } from "react-icons/fa";
+import { useLanguage } from "../contexts/LanguageContext";
 
 // Ikonok pontos elérési úttal (ha a public/images-ben vannak)
 const skills = [
@@ -16,7 +17,11 @@ const skills = [
 // Animációs variációk
 const sectionVariants = {
   hidden: { opacity: 0, y: 60 },
-  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.9 } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "tween", duration: 0.9, ease: "easeOut" },
+  },
 };
 
 const iconVariants = {
@@ -24,7 +29,7 @@ const iconVariants = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { type: "spring", stiffness: 110, delay: 0.2 },
+    transition: { type: "tween", delay: 0.2, duration: 0.6, ease: "easeOut" },
   },
 };
 
@@ -33,7 +38,7 @@ const leftVariants = {
   visible: {
     x: 0,
     opacity: 1,
-    transition: { type: "spring", delay: 0.3, duration: 0.7 },
+    transition: { type: "tween", delay: 0.3, duration: 0.7, ease: "easeOut" },
   },
 };
 
@@ -42,7 +47,7 @@ const rightVariants = {
   visible: {
     x: 0,
     opacity: 1,
-    transition: { type: "spring", delay: 0.5, duration: 0.7 },
+    transition: { type: "tween", delay: 0.5, duration: 0.7, ease: "easeOut" },
   },
 };
 
@@ -57,16 +62,17 @@ const skillsContainerVariants = {
 };
 
 const skillCardVariants = {
-  hidden: { opacity: 0, scale: 0.8, y: 30 },
+  hidden: { opacity: 0, scale: 0.92, y: 30 },
   visible: {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 90 },
+    transition: { type: "tween", duration: 0.7, ease: "easeOut" },
   },
 };
 
 const AboutSection = () => {
+  const { t } = useLanguage();
   return (
     <motion.section
       id="about"
@@ -89,7 +95,7 @@ const AboutSection = () => {
         >
           <FaGraduationCap className="text-blue-700 text-3xl" />
           <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 drop-shadow mb-1">
-            Rólam
+            {t.aboutTitle}
           </h2>
         </motion.div>
 
@@ -107,11 +113,9 @@ const AboutSection = () => {
               <FaCode className="text-white text-6xl md:text-7xl" />
             </div>
             <span className="text-blue-600 font-bold text-lg">
-              Kozma Zoltán
+              {t.profileName}
             </span>
-            <span className="text-gray-500 font-medium">
-              Szoftverfejlesztő • Tesztelő
-            </span>
+            <span className="text-gray-500 font-medium">{t.profileRole}</span>
           </motion.div>
           {/* Right: description */}
           <motion.div
@@ -122,39 +126,18 @@ const AboutSection = () => {
             variants={rightVariants}
           >
             <p className="mb-4">
-              <span className="font-semibold text-blue-800">
-                19 éves vagyok
-              </span>
-              , szoftverfejlesztő és tesztelő szakon végeztem. A programozás
-              világa már korán magával ragadott, különösen a webfejlesztés terén
-              érzem igazán otthon magam.
+              <span className="font-semibold text-blue-800">{t.age}</span>,
+              {t.education} {t.aboutParagraph1}
             </p>
-            <p className="mb-4">
-              Szenvedélyem a modern, esztétikus{" "}
-              <span className="font-semibold text-blue-700">weboldalak</span>{" "}
-              készítése, és úgy gondolom, hogy a projektjeim ezt tükrözik is –
-              mindig törekszem a letisztult, egyedi megjelenésre és a
-              felhasználóbarát élményre.
-            </p>
-            <p className="mb-4">
-              Nyitott vagyok az{" "}
-              <span className="font-semibold text-blue-700">
-                új technológiákra
-              </span>
-              , folyamatosan fejlesztem magam, mert hiszek a{" "}
-              <span className="font-semibold text-blue-700">
-                tanulás és fejlődés
-              </span>{" "}
-              erejében. Készen állok arra, hogy új kihívásokkal találkozzak és
-              még jobbá váljak!
-            </p>
+            <p className="mb-4">{t.aboutParagraph2}</p>
+            <p className="mb-4">{t.aboutParagraph3}</p>
           </motion.div>
         </div>
 
         {/* Skills cards */}
         <div className="w-full mt-10">
           <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">
-            Technológiák, amiket ismerek
+            {t.aboutSectionTitle}
           </h3>
           <motion.div
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 justify-items-center p-5"
@@ -167,26 +150,19 @@ const AboutSection = () => {
               <motion.div
                 key={skill.name}
                 variants={skillCardVariants}
-                whileHover={{
-                  scale: 1.08,
-                  boxShadow: "0 8px 32px rgba(37, 99, 235, 0.13)",
-                }}
                 className={`
                   flex flex-col items-center justify-center
                   w-32 h-32 
                   bg-white/90 rounded-2xl
                   shadow-md border border-blue-100
                   transition
-                  hover:scale-105 hover:shadow-2xl hover:border-blue-400
-                  hover:bg-gradient-to-br hover:from-sky-100 hover:to-blue-100
-                  cursor-pointer
-                  group
                 `}
+                // NINCS whileHover és NINCS semmilyen hover class!
               >
                 <img
                   src={skill.icon}
                   alt={skill.name}
-                  className="w-14 h-14 object-contain mb-2 transition group-hover:scale-110"
+                  className="w-14 h-14 object-contain mb-2"
                   draggable={false}
                 />
                 <span className="font-semibold text-blue-700 text-base text-center">

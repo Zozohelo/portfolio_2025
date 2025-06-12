@@ -4,15 +4,18 @@ import MainPage from "./components/MainPage";
 import AboutSection from "./components/About";
 import Works from "./components/Works";
 import Footer from "./components/Footer";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <MainPage />
-      <AboutSection />
-      <Works />
-      <Footer />
+      <LanguageProvider>
+        <Navbar />
+        <MainPage />
+        <AboutSection />
+        <Works />
+        <Footer />
+      </LanguageProvider>
     </>
   );
 }

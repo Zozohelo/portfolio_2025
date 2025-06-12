@@ -3,14 +3,16 @@ import { AiFillHome } from "react-icons/ai";
 import { FaLaptopCode } from "react-icons/fa";
 import { MdContactSupport } from "react-icons/md";
 import { TbManFilled } from "react-icons/tb";
+import { useLanguage } from "../contexts/LanguageContext";
+import "../Navbar.css";
 
 const flags = {
-  hu: "/images/hun.png", // magyar zászló
-  en: "/images/eng.png", // angol zászló
+  hu: "/images/hun.png",
+  en: "/images/eng.png",
 };
 
 const Navbar = () => {
-  const [lang, setLang] = useState<"hu" | "en">("hu");
+  const { lang, setLang, t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleLang = () => setLang(lang === "hu" ? "en" : "hu");
@@ -65,58 +67,58 @@ const Navbar = () => {
         <div
           id="navbar-menu"
           className={`
-            ${menuOpen ? "flex" : "hidden"}
-            flex-col gap-2 absolute top-20 left-0 w-full bg-white dark:bg-gray-900 shadow-lg border-b border-gray-100 z-40
+            Navbar__menu
+            ${menuOpen ? "Navbar__menu--open" : ""}
             md:static md:flex md:flex-row md:items-center md:bg-transparent md:shadow-none md:border-0 md:w-auto md:gap-0 md:top-auto md:left-auto
           `}
         >
-          <ul className="font-medium flex flex-col md:flex-row md:space-x-8 w-full md:w-auto text-center md:text-left">
+          <ul className="font-medium flex flex-col items-center justify-center md:flex-row md:space-x-8 w-full md:w-auto text-center md:text-left gap-3">
             <li>
               <a
                 href="/"
                 onClick={closeMenu}
-                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
               >
                 <AiFillHome />
-                Kezdőlap
+                {t.home}
               </a>
             </li>
             <li>
               <a
                 href="#about"
                 onClick={closeMenu}
-                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 <TbManFilled />
-                Rólam
+                {t.about}
               </a>
             </li>
             <li>
               <a
                 href="#munkaim"
                 onClick={closeMenu}
-                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 <FaLaptopCode />
-                Munkáim
+                {t.works}
               </a>
             </li>
             <li>
               <a
                 href="#elerhetoseg"
                 onClick={closeMenu}
-                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 <MdContactSupport />
-                Elérhetőség
+                {t.contacts}
               </a>
             </li>
-            {/* Nyelvválasztó csak mobil menüben és desktop ONNAN KIVÉVE */}
+            {/* Nyelvválasztó csak mobil menüben */}
             <li className="flex justify-center md:hidden">
               <button
                 onClick={toggleLang}
-                className="flex items-center gap-2 border rounded-full px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 transition mt-2 mb-2"
+                className="flex items-center gap-2 border rounded-full px-3 py-1 dark:hover:bg-gray-700 transition mt-2 mb-2"
                 aria-label="Nyelvválasztó"
               >
                 <img

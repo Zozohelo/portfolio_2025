@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../contexts/LanguageContext";
 
 // Saját projektjeid - leírások aktualizálva!
 const projects = [
@@ -58,6 +59,7 @@ const textVariants = {
 };
 
 const Works = () => {
+  const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
 
   // Lapozás (irány szerint)
@@ -83,7 +85,7 @@ const Works = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ type: "spring", duration: 0.7 }}
       >
-        Munkáim
+        {t.worksTitle}
       </motion.h2>
       <div className="relative w-full max-w-6xl flex flex-col items-center">
         {/* Carousel kép */}
@@ -91,7 +93,7 @@ const Works = () => {
           <img
             key={projects[current].image}
             src={projects[current].image}
-            alt={projects[current].title}
+            alt={t.projects[current].title}
             className="object-contain w-full h-full transition-all duration-500"
             style={{
               maxHeight: "70vh",
@@ -123,7 +125,7 @@ const Works = () => {
         <div className="w-full mt-8 p-8 bg-white/90 rounded-2xl shadow text-center max-w-3xl min-h-[135px] flex flex-col items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
-              key={projects[current].title}
+              key={t.projects[current].title}
               initial="hidden"
               animate="visible"
               exit="exit"
@@ -131,10 +133,10 @@ const Works = () => {
               className="w-full"
             >
               <h3 className="text-2xl font-bold text-blue-800 mb-2">
-                {projects[current].title}
+                {t.projects[current].title}
               </h3>
               <p className="text-blue-900 mb-2">
-                {projects[current].description}
+                {t.projects[current].description}
               </p>
             </motion.div>
           </AnimatePresence>
