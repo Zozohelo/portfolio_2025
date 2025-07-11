@@ -3,21 +3,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
 
 // Saját projektjeid - leírások aktualizálva!
+// Itt add meg a linket a tennisz weboldalhoz:
 const projects = [
   {
     title: "Tenisz weboldal",
     image: "/images/munka1.png",
     description:
       "Egy modern, reszponzív tenisz weboldal, melyen a látogatók könnyedén böngészhetnek termékek és szolgáltatások között.",
-    link: "",
+    link: "https://ludovikatenisz.hu", // <-- Ide illeszd be a tényleges linket!
   },
   {
-    title: "Projektkezelő kezdőlap",
+    title: "Projektkezelő iskolai projekt",
     image: "/images/munka3.png",
     description:
-      "A projektkezelő alkalmazás letisztult, felhasználóbarát főoldala Tailwind CSS-sel megvalósítva.",
-    link: "",
+      "Ezt a projektkezelő alkalmazást a szakmai vizsga egyik részeként készítettük. Egy React és Laravel alapú projekt, Tailwind CSS-sel és animációkkal megvalósítva. A vizsgabiztosoknak nagyon tetszett.",
+    link: "https://github.com/remedyhehe/VizsgaProjekt",
   },
+
   {
     title: "Projektkezelő böngésző felület",
     image: "/images/munka5.png",
@@ -45,6 +47,13 @@ const projects = [
     description:
       "A projektekhez tartozó feladatok hatékony kezelését lehetővé tevő felület.",
     link: "",
+  },
+  {
+    title: "NextTech Webshop",
+    image: "/images/munka11.png",
+    description:
+      "React frontend és Laravel backend alapokra épült, modern, reszponzív és felhasználóbarát webshop. A dizájnt Tailwind CSS és különböző animációk teszik vonzóvá, valós idejű adatkezeléssel és élvezetes felhasználói élménnyel.",
+    link: "https://github.com/Zozohelo/NextTechWebshop",
   },
 ];
 
@@ -121,7 +130,7 @@ const Works = () => {
         >
           &#8594;
         </button>
-        {/* Leírás */}
+        {/* Leírás + LINK */}
         <div className="w-full mt-8 p-8 bg-white/90 rounded-2xl shadow text-center max-w-3xl min-h-[135px] flex flex-col items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
@@ -138,6 +147,31 @@ const Works = () => {
               <p className="text-blue-900 mb-2">
                 {t.projects[current].description}
               </p>
+              {/* Ha van link, jelenítse meg */}
+              {projects[current].link && (
+                <a
+                  href={projects[current].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-4 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 transition-transform duration-300"
+                >
+                  Projekt megnézése
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className="w-5 h-5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17 7l-10 10m0-10h10v10"
+                    />
+                  </svg>
+                </a>
+              )}
             </motion.div>
           </AnimatePresence>
         </div>

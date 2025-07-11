@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
 import TypewriterEffect from "typewriter-effect";
 import LetterGlitch from "../LetterGlicth"; // <--- importáld be!
+import { FaArrowAltCircleRight } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -72,9 +74,9 @@ const MainPage = () => {
         className="relative z-10 w-full md:w-3/4 lg:w-2/3 flex flex-col md:flex-row items-center justify-between bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-10 gap-12"
         variants={containerVariants}
       >
-        {/* Left side: Text and buttons */}
+        {/* Bal oldal: Szöveg és gombok */}
         <motion.div
-          className="flex-1 flex flex-col gap-8"
+          className="flex-1 flex flex-col gap-8 w-full"
           variants={leftVariants}
         >
           <motion.div variants={textVariants}>
@@ -88,39 +90,39 @@ const MainPage = () => {
             </p>
           </motion.div>
           <motion.div
-            className="flex gap-6 mt-2"
+            className="flex flex-col gap-4 items-center w-full md:flex-row md:gap-6 md:items-start md:justify-start mt-2"
             variants={textVariants}
             transition={{ delay: 0.5 }}
           >
             <a
               href="#elerhetoseg"
-              className="px-6 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-lg hover:bg-blue-700 transition"
+              className="w-full md:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 transition-transform duration-300"
             >
+              <MdEmail />
               {t.contacts}
             </a>
             <a
               href="#munkaim"
-              className="px-6 py-3 rounded-full bg-white border-2 border-blue-600 text-blue-700 font-semibold hover:bg-blue-50 transition shadow"
+              className="w-full md:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-blue-600 text-blue-700 font-semibold shadow hover:bg-blue-50 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300/50 transition-transform duration-300"
             >
+              <FaArrowAltCircleRight />
               {t.myworks}
             </a>
           </motion.div>
         </motion.div>
 
-        {/* Right side: Avatar image in circle with effect */}
+        {/* Jobb oldal: Avatar kép körben, effektussal */}
         <motion.div
-          className="flex-1 flex items-center justify-center"
+          className="flex-1 flex items-center justify-center w-full"
           variants={rightVariants}
         >
           <motion.div
-            className="relative w-64 h-64 flex items-center justify-center mt-8 md:mt-0"
+            className="relative w-80 h-80 sm:w-48 sm:h-48 md:w-full md:h-80 flex items-center justify-center mt-2 md:mt-0 group"
             variants={avatarVariants}
           >
-            {/* Kör alakú háttér + glow */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 via-sky-300 to-blue-700"></div>
-            {/* Avatar kép */}
             <img
-              className="relative rounded-full border-4 border-white"
+              className="relative z-10 w-full h-full"
+              style={{ objectFit: "contain" }} // vagy akár el is hagyhatod
               src="/images/me.png"
               alt="Kozma Zoltán"
             />

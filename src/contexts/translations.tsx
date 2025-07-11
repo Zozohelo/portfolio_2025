@@ -13,10 +13,10 @@ const translations = {
     // About/Skills rész
     aboutTitle: "Rólam",
     profileName: "Kozma Zoltán",
-    profileRole: "Szoftverfejlesztő • Tesztelő",
+    profileRole: "Frontend fejlesztő",
     aboutSectionTitle: "Technológiák, amiket ismerek",
     age: "19 éves vagyok",
-    education: "szoftverfejlesztő és tesztelő szakon végeztem.",
+    education: "szoftverfejlesztő és tesztelő szakon végeztem a technikumban.",
     aboutParagraph1:
       "A programozás világa már korán magával ragadott, különösen a webfejlesztés terén érzem igazán otthon magam.",
     aboutParagraph2:
@@ -30,12 +30,13 @@ const translations = {
       {
         title: "Tenisz weboldal",
         description:
-          "Egy modern, reszponzív tenisz weboldal, melyen a látogatók könnyedén böngészhetnek termékek és szolgáltatások között.",
+          "Egy modern, reszponzív one-page tenisz weboldal, amely Reactban készült. A navigációt React Router biztosítja, a letisztult dizájnt Tailwind CSS-sel alakítottam ki, míg a látványos animációkért a Framer Motion felel. A látogatók könnyedén böngészhetnek a termékek és szolgáltatások között.",
       },
+
       {
-        title: "Projektkezelő kezdőlap",
+        title: "Projektkezelő iskolai projekt",
         description:
-          "A projektkezelő alkalmazás letisztult, felhasználóbarát főoldala Tailwind CSS-sel megvalósítva.",
+          "Ezt a projektkezelő alkalmazást a szakmai vizsga egyik részeként készítettük. Egy React és Laravel alapú projekt, Tailwind CSS-sel és animációkkal megvalósítva. A vizsgabiztosoknak nagyon tetszett.",
       },
       {
         title: "Projektkezelő böngésző felület",
@@ -53,9 +54,14 @@ const translations = {
           "Új projekt létrehozására szolgáló intuitív, modern dizájnú oldal.",
       },
       {
-        title: "Feladatkezelő modul",
+        title: "Feladatkezelő",
         description:
-          "A projektekhez tartozó feladatok hatékony kezelését lehetővé tevő felület.",
+          "Ez egy React és Laravel alapokra épült feladatkezelő modul, melynek letisztult dizájnját Tailwind CSS biztosítja. A feladatokat egyszerűen lehet áthúzni egyik oszlopból a másikba drag-and-drop módszerrel, és minden művelet valós időben mentődik az adatbázisba.",
+      },
+      {
+        title: "NextTech Webshop",
+        description:
+          "React frontend és Laravel backend alapokra épült, modern, reszponzív és felhasználóbarát webshop. A dizájnt Tailwind CSS és különböző animációk teszik vonzóvá, valós idejű adatkezeléssel és élvezetes felhasználói élménnyel.",
       },
     ],
     footerCopyright: "Kozma Zoltán. Minden jog fenntartva.",
@@ -74,10 +80,11 @@ const translations = {
     // About/Skills section
     aboutTitle: "About Me",
     profileName: "Zoltán Kozma",
-    profileRole: "Software Developer • Tester",
+    profileRole: "Frontend developer",
     aboutSectionTitle: "Technologies I Use",
     age: "I'm 19 years old",
-    education: "I graduated as a software developer and tester.",
+    education:
+      "I graduated as a software developer and tester at technical school.",
     aboutParagraph1:
       "I was captivated by the world of programming early on, and I truly feel at home in web development.",
     aboutParagraph2:
@@ -89,13 +96,15 @@ const translations = {
       {
         title: "Tennis Website",
         description:
-          "A modern, responsive tennis website where visitors can easily browse products and services.",
+          "A modern, responsive one-page tennis website built with React. Navigation is handled by React Router, the clean design is crafted with Tailwind CSS, and smooth animations are powered by Framer Motion. Visitors can easily browse products and services.",
       },
+
       {
-        title: "Project Manager Homepage",
+        title: "Project Management School Project",
         description:
-          "A clean, user-friendly homepage for the project management app, built with Tailwind CSS.",
+          "This project management application was created as part of our professional exam. It is a React and Laravel based project, styled with Tailwind CSS and enhanced with animations. The examiners were very impressed with the result.",
       },
+
       {
         title: "Project Browser Interface",
         description:
@@ -111,9 +120,14 @@ const translations = {
         description: "An intuitive, modern page for creating new projects.",
       },
       {
-        title: "Task Manager Module",
+        title: "Task Management",
         description:
-          "An interface enabling efficient management of project-related tasks.",
+          "A task management feature built with React and Laravel, featuring a sleek Tailwind CSS design. Tasks can be easily moved between columns using drag-and-drop, with every action instantly saved to the database in real time.",
+      },
+      {
+        title: "NextTech Webshop",
+        description:
+          "A modern, responsive and user-friendly webshop built with a React frontend and Laravel backend. The clean design is styled with Tailwind CSS and enhanced by various animations, providing real-time data handling and an engaging user experience.",
       },
     ],
     footerCopyright: "Zoltán Kozma. All rights reserved.",

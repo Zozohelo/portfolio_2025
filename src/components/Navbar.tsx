@@ -77,10 +77,9 @@ const Navbar = () => {
               <a
                 href="/"
                 onClick={closeMenu}
-                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-gray-400 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
               >
-                <AiFillHome />
                 {t.home}
               </a>
             </li>
@@ -88,9 +87,8 @@ const Navbar = () => {
               <a
                 href="#about"
                 onClick={closeMenu}
-                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent"
+                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-gray-400 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                <TbManFilled />
                 {t.about}
               </a>
             </li>
@@ -100,7 +98,6 @@ const Navbar = () => {
                 onClick={closeMenu}
                 className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                <FaLaptopCode />
                 {t.works}
               </a>
             </li>
@@ -110,7 +107,6 @@ const Navbar = () => {
                 onClick={closeMenu}
                 className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                <MdContactSupport />
                 {t.contacts}
               </a>
             </li>

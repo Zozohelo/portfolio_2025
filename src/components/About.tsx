@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGraduationCap, FaCode } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import { useLanguage } from "../contexts/LanguageContext";
 
 // Ikonok pontos elérési úttal (ha a public/images-ben vannak)
@@ -10,7 +10,7 @@ const skills = [
   { name: "React", icon: "/images/react.png" },
   { name: "SQL", icon: "/images/sql.png" },
   { name: "Tailwind CSS", icon: "/images/tailwindcss.png" },
-  { name: "Bootstrap", icon: "/images/bootstrap.png" },
+  { name: "Next.js", icon: "/images/nextjs.png" },
   { name: "JavaScript", icon: "/images/javascript.png" },
 ];
 
@@ -93,7 +93,6 @@ const AboutSection = () => {
           animate="visible"
           variants={iconVariants}
         >
-          <FaGraduationCap className="text-blue-700 text-3xl" />
           <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 drop-shadow mb-1">
             {t.aboutTitle}
           </h2>
