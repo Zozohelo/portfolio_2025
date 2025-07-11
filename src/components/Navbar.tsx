@@ -1,8 +1,4 @@
 import { useState } from "react";
-import { AiFillHome } from "react-icons/ai";
-import { FaLaptopCode } from "react-icons/fa";
-import { MdContactSupport } from "react-icons/md";
-import { TbManFilled } from "react-icons/tb";
 import { useLanguage } from "../contexts/LanguageContext";
 import "../Navbar.css";
 
