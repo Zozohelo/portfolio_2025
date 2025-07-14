@@ -11,7 +11,7 @@ const skills = [
   { name: "Javascript", icon: "/images/javascript.png" },
   { name: "Tailwind CSS", icon: "/images/tailwindcss.png" },
   { name: "Next.js", icon: "/images/nextjs.png" },
-  { name: "Typescript", icon: "/images/javascript.png" },
+  { name: "Typescript", icon: "/images/typescript.png" },
 ];
 
 // Animációs variációk
