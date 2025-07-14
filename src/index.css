@@ -1,6 +1,8 @@
+
 html {
   scroll-behavior: smooth;
 }
+
 /* Egyszerű slide animáció mobil menühöz */
 .slide-mobile-menu-enter {
   opacity: 0;

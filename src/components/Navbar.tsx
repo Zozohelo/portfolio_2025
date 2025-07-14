@@ -92,7 +92,7 @@ const Navbar = () => {
               <a
                 href="#munkaim"
                 onClick={closeMenu}
-                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-gray-400 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 {t.works}
               </a>
@@ -101,7 +101,7 @@ const Navbar = () => {
               <a
                 href="#elerhetoseg"
                 onClick={closeMenu}
-                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent"
+                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-gray-400 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 {t.contacts}
               </a>

@@ -8,10 +8,10 @@ const skills = [
   { name: "CSS", icon: "/images/css.png" },
   { name: "Laravel", icon: "/images/laravel.png" },
   { name: "React", icon: "/images/react.png" },
-  { name: "SQL", icon: "/images/sql.png" },
+  { name: "Javascript", icon: "/images/javascript.png" },
   { name: "Tailwind CSS", icon: "/images/tailwindcss.png" },
   { name: "Next.js", icon: "/images/nextjs.png" },
-  { name: "JavaScript", icon: "/images/javascript.png" },
+  { name: "Typescript", icon: "/images/javascript.png" },
 ];
 
 // Animációs variációk
@@ -132,6 +132,20 @@ const AboutSection = () => {
             <p className="mb-4">{t.aboutParagraph3}</p>
           </motion.div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <a
+            href="/cv.pdf"
+            download
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl shadow transition"
+          >
+            CV letöltése
+          </a>
+        </motion.div>
 
         {/* Skills cards */}
         <div className="w-full mt-10">
