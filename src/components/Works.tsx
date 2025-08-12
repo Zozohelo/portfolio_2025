@@ -55,6 +55,14 @@ const projects = [
       "React frontend és Laravel backend alapokra épült, modern, reszponzív és felhasználóbarát webshop. A dizájnt Tailwind CSS és különböző animációk teszik vonzóvá, valós idejű adatkezeléssel és élvezetes felhasználói élménnyel.",
     link: "https://github.com/Zozohelo/NextTechWebshop",
   },
+ {
+  title: "Film előzetesek weboldal",
+  image: "/images/munka12.png",
+  description:
+    "React és Tailwind CSS alapokra épített, modern és reszponzív weboldal, amely filmelőzeteseket mutat be látványos animációkkal. A felhasználóbarát felület és a dinamikus elemek élvezetes böngészési élményt nyújtanak.",
+  link: "https://makitrailer.netlify.app/",
+},
+
 ];
 
 const textVariants = {

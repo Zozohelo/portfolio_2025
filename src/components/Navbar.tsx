@@ -99,6 +99,15 @@ const Navbar = () => {
             </li>
             <li>
               <a
+                href="#szolgaltatasok"
+                onClick={closeMenu}
+                className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-gray-400 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                {t.services}
+              </a>
+            </li>
+            <li>
+              <a
                 href="#elerhetoseg"
                 onClick={closeMenu}
                 className="flex items-center gap-1 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-gray-400 dark:hover:text-white md:dark:hover:bg-transparent"

@@ -3,26 +3,27 @@ const translations = {
     home: "Kezdőlap",
     about: "Rólam",
     works: "Munkáim",
+    services: "Szolgáltatások",
     contact: "Elérhetőség",
     welcome: "Üdvözöllek!",
     description:
-      "Kozma Zoltán vagyok, Frontend fejlesztéssel foglalkozom. Szenvedélyem a modern, letisztult és reszponzív weboldalak, mobil applikációk készítése, amelyek nemcsak jól néznek ki, de felhasználóbarátok is.",
+      "Kozma Zoltán vagyok, szoftverfejlesztő. Szenvedélyem az informatika számos ága, a webfejlesztéstől és alkalmazásfejlesztéstől kezdve egészen az IT segítségnyújtásig és rendszerkarbantartásig. Szeretek modern, letisztult és reszponzív weboldalakat, mobil- és asztali alkalmazásokat készíteni, amelyek nemcsak esztétikusak, hanem felhasználóbarátok is. Nyitott vagyok új technológiák, programozási nyelvek és fejlesztési módszerek megismerésére, hogy minél szélesebb körben tudjak értéket teremteni a digitális világban.",
     contacts: "Elérhetőségek",
     myworks: "Munkáim",
 
     // About/Skills rész
     aboutTitle: "Rólam",
     profileName: "Kozma Zoltán",
-    profileRole: "Frontend fejlesztő",
+    profileRole: "Szoftverfejlesztő",
     aboutSectionTitle: "Technológiák, amiket ismerek",
     age: "19 éves vagyok",
     education: "szoftverfejlesztő és tesztelő szakon végeztem a technikumban.",
     aboutParagraph1:
-      "A programozás világa már korán magával ragadott, különösen a webfejlesztés terén érzem igazán otthon magam.",
-    aboutParagraph2:
-      "Szenvedélyem a modern, esztétikus weboldalak készítése, és úgy gondolom, hogy a projektjeim ezt tükrözik is – mindig törekszem a letisztult, egyedi megjelenésre és a felhasználóbarát élményre.",
-    aboutParagraph3:
-      "Nyitott vagyok az új technológiákra, folyamatosan fejlesztem magam, mert hiszek a tanulás és fejlődés erejében. Készen állok arra, hogy új kihívásokkal találkozzak és még jobbá váljak!",
+  "Már fiatal koromban magával ragadott az informatika világa, a programozástól kezdve az IT rendszerek működéséig. Az évek során számos területen kipróbáltam magam, beleértve a web- és alkalmazásfejlesztést, valamint a számítógépes rendszerek karbantartását és támogatását.",
+aboutParagraph2:
+  "Szenvedélyem az esztétikus, jól működő digitális megoldások létrehozása – legyen szó modern weboldalról, mobilalkalmazásról vagy egy megbízhatóan működő számítógépes rendszerről. Munkáimban mindig törekszem a letisztult megjelenésre, a hatékonyságra és a felhasználóbarát élményre.",
+aboutParagraph3:
+  "Nyitott vagyok az új technológiákra és módszerekre, folyamatosan fejlesztem tudásomat, mert hiszek abban, hogy a folyamatos tanulás a siker kulcsa. Készen állok új kihívásokra, és arra, hogy széleskörű informatikai tudásommal értéket teremtsek.",
 
     // Works/projektek section
     worksTitle: "Munkáim",
@@ -63,6 +64,12 @@ const translations = {
         description:
           "React frontend és Laravel backend alapokra épült, modern, reszponzív és felhasználóbarát webshop. A dizájnt Tailwind CSS és különböző animációk teszik vonzóvá, valós idejű adatkezeléssel és élvezetes felhasználói élménnyel.",
       },
+      {
+  title: "Film előzetesek weboldal",
+  description:
+    "React és Tailwind CSS alapokra épített, modern és reszponzív weboldal, amely filmelőzeteseket mutat be látványos animációkkal. A felhasználóbarát felület és a dinamikus elemek élvezetes böngészési élményt nyújtanak.",
+},
+
     ],
     footerCopyright: "Kozma Zoltán. Minden jog fenntartva.",
   },
@@ -71,26 +78,28 @@ const translations = {
     about: "About",
     works: "My Works",
     contact: "Contact",
+    services: "Services",
     welcome: "Welcome!",
     description:
-      "I'm Zoltán Kozma, a Frontend developer. My passion is creating modern, clean, and responsive websites and mobile apps that not only look great but are also user-friendly.",
+      "I’m Zoltán Kozma, a software developer passionate about many areas of IT — from web and application development to IT support and system maintenance. I enjoy creating modern, clean, and responsive websites as well as mobile and desktop applications that are not only visually appealing but also user-friendly. I’m always open to learning new technologies, programming languages, and development methods to create value across a wide range of digital solutions.",
     contacts: "Contact",
     myworks: "My Works",
 
     // About/Skills section
     aboutTitle: "About Me",
     profileName: "Zoltán Kozma",
-    profileRole: "Frontend developer",
+    profileRole: "Softver developer",
     aboutSectionTitle: "Technologies I Use",
     age: "I'm 19 years old",
     education:
       "I graduated as a software developer and tester at technical school.",
     aboutParagraph1:
-      "I was captivated by the world of programming early on, and I truly feel at home in web development.",
-    aboutParagraph2:
-      "My passion is creating modern, aesthetic websites, and I believe my projects reflect this – I always strive for a clean, unique design and a user-friendly experience.",
-    aboutParagraph3:
-      "I'm open to new technologies and constantly improving myself, because I believe in the power of learning and growth. I'm ready to face new challenges and become even better!",
+  "From an early age, I was fascinated by the world of IT — from programming to understanding how computer systems work. Over the years, I have gained experience in various areas, including web and application development, as well as computer system maintenance and support.",
+aboutParagraph2:
+  "My passion lies in creating well-designed, reliable digital solutions — whether it’s a modern website, a mobile application, or a stable, well-functioning computer system. In all my work, I strive for clean design, efficiency, and a user-friendly experience.",
+aboutParagraph3:
+  "I am open to new technologies and methodologies, constantly improving my skills because I believe continuous learning is the key to success. I am ready to take on new challenges and create value with my diverse IT expertise.",
+
     worksTitle: "My Works",
     projects: [
       {
@@ -129,6 +138,12 @@ const translations = {
         description:
           "A modern, responsive and user-friendly webshop built with a React frontend and Laravel backend. The clean design is styled with Tailwind CSS and enhanced by various animations, providing real-time data handling and an engaging user experience.",
       },
+      {
+  title: "Movie Trailers Website",
+  description:
+    "A modern, responsive website built with React and Tailwind CSS, showcasing movie trailers with eye-catching animations. The user-friendly interface and dynamic elements provide an enjoyable browsing experience.",
+},
+
     ],
     footerCopyright: "Zoltán Kozma. All rights reserved.",
   },
